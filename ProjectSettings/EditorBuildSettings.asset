@@ -5,7 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Video.unity
+    guid: 61c4c7acb263f1245bc9971b389cb6e0
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: ea13d9987f24c2b4f997b53a05f87785
+  - enabled: 1
+    path: Assets/Scenes/skilklwheeltest.unity
+    guid: cc019a75d3f44f24982b72d86ed29498
+  - enabled: 1
+    path: Assets/Scenes/Score.unity
+    guid: 00aef6372638c174592a0b8f1ba5fa8d
+  - enabled: 1
+    path: Assets/Scenes/Info.unity
+    guid: 0ba68eea34a884c4a936294a8481f0d2
   m_configObjects: {}
