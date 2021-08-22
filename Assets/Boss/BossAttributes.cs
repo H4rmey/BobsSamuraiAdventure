@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossAttributes : MonoBehaviour
 {
@@ -20,5 +21,8 @@ public class BossAttributes : MonoBehaviour
         hp.currentHealth    = this.currentHealth;
         hp.maxHealth        = this.maxHealth;
         hp.Run();
+
+        if (this.currentHealth < 0)
+            SceneManager.LoadScene("Score");
     }
 }

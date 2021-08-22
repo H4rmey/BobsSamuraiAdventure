@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Controller2D))]
 public class Player : MonoBehaviour
 {
+    public float score = 1000;
     [HideInInspector]
     public Inputs input;
 
@@ -85,10 +87,23 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        score -= Time.deltaTime;
+        if (score < 0)
+            score = 0;
+
+
         hp.currentHealth = this.currentHealth;
         hp.maxHealth = this.baseHealth;
         hp.Run();
-        
+
+        if (this.currentHealth < 0)
+        {
+            SceneManager.LoadScene("Score");
+            score = 0;
+        }
+
+        PlayerPrefs.SetFloat("score", score);
+
         if (this.currentHealth > this.baseHealth)
             this.currentHealth = this.baseHealth;
         if (jumpAccend > 0.6f)
